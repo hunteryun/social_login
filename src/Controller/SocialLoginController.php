@@ -159,7 +159,7 @@ class SocialLoginController {
         ))
         ->condition('uid', $existed_user->uid)
         ->execute();
-      session()->set('ecommerce_user', $existed_user);
+      session()->set('curuser', $existed_user);
     }else{
       $uid = db_insert('user')
         ->fields(array(
@@ -182,7 +182,7 @@ class SocialLoginController {
                 ->execute()
                 ->fetchObject();
 
-      session()->set('ecommerce_user', $new_user);
+      session()->set('curuser', $new_user);
     }
   }
 
