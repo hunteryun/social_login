@@ -1,0 +1,5 @@
+name: Social Login
+type: module
+description: Allows your users to login with social networks like for example Twitter, Facebook, Google.
+core: 1.x
+package: Hunter

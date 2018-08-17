@@ -1,0 +1,80 @@
+<?php
+
+/**
+ * Implements hook_config_form().
+ */
+function social_login_config_form() {
+  $form['github_client_id'] = array(
+    '#type' => 'textfield',
+    '#title' => 'Client ID',
+    '#required' => TRUE,
+    '#prefix' => '<fieldset class="layui-elem-field"><legend>Github</legend> <div class="layui-field-box">',
+    '#default_value' => variable_get('github_client_id'),
+    '#attributes' => array('id' => 'github_client_id'),
+  );
+  $form['github_client_secret'] = array(
+    '#type' => 'textfield',
+    '#title' => 'Client Secret',
+    '#required' => TRUE,
+    '#default_value' => variable_get('github_client_secret'),
+    '#attributes' => array('id' => 'github_client_secret'),
+  );
+  $form['github_callback'] = array(
+    '#type' => 'textfield',
+    '#title' => 'Callback',
+    '#required' => TRUE,
+    '#suffix' => '</div></fieldset>',
+    '#default_value' => variable_get('github_callback'),
+    '#attributes' => array('id' => 'github_callback'),
+  );
+  $form['facebook_client_id'] = array(
+    '#type' => 'textfield',
+    '#title' => 'Client ID',
+    '#required' => TRUE,
+    '#prefix' => '<fieldset class="layui-elem-field"><legend>Facebook</legend> <div class="layui-field-box">',
+    '#default_value' => variable_get('facebook_client_id'),
+    '#attributes' => array('id' => 'facebook_client_id'),
+  );
+  $form['facebook_client_secret'] = array(
+    '#type' => 'textfield',
+    '#title' => 'Client Secret',
+    '#required' => TRUE,
+    '#default_value' => variable_get('facebook_client_secret'),
+    '#attributes' => array('id' => 'facebook_client_secret'),
+  );
+  $form['facebook_callback'] = array(
+    '#type' => 'textfield',
+    '#title' => 'Callback',
+    '#required' => TRUE,
+    '#suffix' => '</div></fieldset>',
+    '#default_value' => variable_get('facebook_callback'),
+    '#attributes' => array('id' => 'facebook_callback'),
+  );
+  $form['google_client_id'] = array(
+    '#type' => 'textfield',
+    '#title' => 'Client ID',
+    '#required' => TRUE,
+    '#prefix' => '<fieldset class="layui-elem-field"><legend>Google</legend> <div class="layui-field-box">',
+    '#default_value' => variable_get('google_client_id'),
+    '#attributes' => array('id' => 'google_client_id'),
+  );
+  $form['google_client_secret'] = array(
+    '#type' => 'textfield',
+    '#title' => 'Client Secret',
+    '#required' => TRUE,
+    '#default_value' => variable_get('google_client_secret'),
+    '#attributes' => array('id' => 'google_client_secret'),
+  );
+  $form['google_callback'] = array(
+    '#type' => 'textfield',
+    '#title' => 'Callback',
+    '#required' => TRUE,
+    '#suffix' => '</div></fieldset>',
+    '#default_value' => variable_get('google_callback'),
+    '#attributes' => array('id' => 'google_callback'),
+  );
+  $form['form_id'] = 'social_login_form';
+  $form['name'] = '社交帐号设置';
+
+  return $form;
+}

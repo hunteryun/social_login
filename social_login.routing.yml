@@ -1,0 +1,35 @@
+social_login.social_login_facebook_login:
+  path: '/facebook/login'
+  defaults:
+    _controller: '\Hunter\social_login\Controller\SocialLoginController::facebook_login'
+    _title: 'Faceboo Login'
+
+social_login.social_login_google_login:
+  path: '/google/login'
+  defaults:
+    _controller: '\Hunter\social_login\Controller\SocialLoginController::google_login'
+    _title: 'Google Login'
+
+social_login.social_login_github_login:
+  path: '/github/login'
+  defaults:
+    _controller: '\Hunter\social_login\Controller\SocialLoginController::github_login'
+    _title: 'Github Login'
+
+social_login.social_login_github_callback:
+  path: '/github/callback'
+  defaults:
+    _controller: '\Hunter\social_login\Controller\SocialLoginController::github_callback'
+    _title: 'Github callback'
+
+social_login.social_login_facebook_callback:
+  path: '/facebook/callback'
+  defaults:
+    _controller: '\Hunter\social_login\Controller\SocialLoginController::facebook_callback'
+    _title: 'Faceboo callback'
+
+social_login.social_login_google_callback:
+  path: '/google/callback'
+  defaults:
+    _controller: '\Hunter\social_login\Controller\SocialLoginController::google_callback'
+    _title: 'Google callback'
